@@ -1,17 +1,3 @@
-<?php
-
-if (version_compare(PHP_VERSION, '7.2.5') === -1) {
-    exit('You need at least PHP '.'7.2.5'.' to install this application.');
-}
-
-// if not installed yet, redirect to public dir
-if ( ! file_exists(__DIR__.'/.env') || ! (preg_match('/INSTALLED=(true|1)/', file_get_contents(__DIR__.'/.env')))) {
-    header("Location: public");
-    die();
-}
-
-?>
-
 <html lang="en">
 <head>
     <title>.htaccess error</title>
